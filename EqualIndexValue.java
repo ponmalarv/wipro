@@ -1,5 +1,6 @@
 package Programs;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EqualIndexValue {
@@ -7,18 +8,29 @@ public class EqualIndexValue {
 		  Scanner s=new Scanner(System.in);
 		  int n=s.nextInt();
 		  int count=0;
+		  int i;
 		  int a[]=new int[n];
-		  for (int i = 0; i < n; i++) {
+		  int b[]=new int[n];
+		  for (i = 0; i < n; i++) {
 			a[i]=s.nextInt();
 		}
-		  for(int i=0;i<n;i++){
+		  for(i=0;i<n;i++){
 			  if(a[i]==i){
-				  System.out.println(a[i]);
+				  b[i]=a[i];
+				
 				  count++;
 			  }
-		  }if(count==0){
-			  System.out.println("-1");
 		  }
+		  Arrays.sort(b);
+		  if(count==0){
+			  System.out.println("-1");
+		  }else{
+			  for(i=0;i<n;i++){
+				  if(b[i]!=0){
+			  System.out.println(b[i]);
+		  }
+			  }
+			  }
 		  s.close();
 }
 }
