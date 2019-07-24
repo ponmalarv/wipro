@@ -1,5 +1,6 @@
 package sums;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Medianval {
@@ -11,6 +12,7 @@ public class Medianval {
 		for(int i=0;i<n;i++){
 			a[i]=scan.nextInt();
 		}
+		Arrays.sort(a);
 		if(n%2!=0){
 		b[0]=a[n/2];
 		}System.out.println(b[0]);
